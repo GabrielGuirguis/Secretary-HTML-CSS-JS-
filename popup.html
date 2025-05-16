@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <input placeholder="title" id="title">
+    <form id="eventForm">
+        <input placeholder="Summary" id="summary">
         <input placeholder="Description" id="description">
-        <span>Start: <input type="datetime-local" id="start"></span>
-        <span>End: <input type="datetime-local" id="End"></span>
+        <div>Start:<input type="datetime-local" id="start"></div>: 
+        <span>End:<input type="datetime-local" id="end"></span>
+        <input type="submit">
     </form>
-    <button id="submit">Add</button>
     <script src="popup.js"></script>
 </body>
 </html>

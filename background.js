@@ -1,20 +1,31 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type == "ADD_EVENT") {
-        addEventToCalendar()
+
+        const event = {
+            "summary": message.summary,
+            "description": message.description,
+            "start": { 
+                dateTime: message.start + ":00-04:00"
+            },
+            "end": { 
+                dateTime: message.end + ":00-04:00"
+            },
+        }
+
+        console.log("summary", message.summary);
+        console.log("description", message.description);
+        console.log("start", message.start);
+        console.log("end", message.end);
+
+        addEventToCalendar(event)
             .then(result => sendResponse({success: true, result}))
             .catch(error => sendResponse({success: false, error}))
         return true
     }
 })
 
-async function addEventToCalendar() {
+async function addEventToCalendar(event) {
     const token = await getAuthToken()
-    const event = {
-        "summary": "Coffee chat",
-        "description": "Hi",
-        "start": { dateTime: "2025-05-15T13:15:03-08:00" },
-        "end": { dateTime: "2025-05-15T14:15:03-08:00" }
-    }
     const response = await fetch("https://www.googleapis.com/calendar/v3/calendars/primary/events",
         {
             method: "POST",
