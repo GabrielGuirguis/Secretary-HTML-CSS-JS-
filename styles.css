@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.popup {
+    display: flex;
+    border-radius: 35px;
+    background-color: #E6E0E9;
+    height: 520px;
+    width: 390px;
+}
+
+
+
+#summary {
+    border: none;
+    border-bottom: 2px solid #706C76; /* default thin bottom border */
+    outline: none;
+    background:none;
+    font-size: 28px;
+    margin:5px;
+  
+    transition: border-color 0.1s, border-bottom-width 0.1s;
+  }
+  
+#description:focus, #summary:focus {
+    border-bottom: 3px solid #007BFF;
+}
+
+#description {
+    border: none;
+    height: 20px;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    border-radius: 3px;
+
+    transition: background-color 0.1s, border-color 0.1s, border-bottom-width 0.1s;
+}
+
+#description:hover {
+    background-color: #d5cee2;
+}

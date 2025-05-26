@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <form id="eventForm">
-        <input placeholder="Summary" id="summary">
-        <input placeholder="Description" id="description">
-        <div>Start:<input type="datetime-local" id="start"></div>: 
-        <span>End:<input type="datetime-local" id="end"></span>
-        <input type="submit">
-    </form>
+    <div class="popup">
+        <form id="eventForm">
+            <input placeholder="Add title" id="summary">
+            <input placeholder="Add description" id="description">
+            <div>Start:<input type="datetime-local" id="start"></div>
+            <div>End:<input type="datetime-local" id="end"></div>
+            <input type="submit">
+        </form>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
