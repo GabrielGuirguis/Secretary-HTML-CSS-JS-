@@ -1,4 +1,4 @@
-document.getElementById("eventForm").addEventListener("submit", (e) => {
+document.getElementById("submitForm").addEventListener("submit", (e) => {
     e.preventDefault()
     
     chrome.runtime.sendMessage({
@@ -18,3 +18,5 @@ document.getElementById("eventForm").addEventListener("submit", (e) => {
         }
     })
 })
+
+generateTimeOptions(15)
