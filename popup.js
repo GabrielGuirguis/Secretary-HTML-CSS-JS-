@@ -19,4 +19,15 @@ document.getElementById("submitForm").addEventListener("submit", (e) => {
     })
 })
 
-generateTimeOptions(15)
+const eventIndicator = document.getElementById("event-indicator")
+const taskIndicator = document.getElementById("task-indicator")
+
+document.getElementById("event").addEventListener("click" = () => {
+    eventIndicator.classList.add("selected")
+    taskIndicator.classList.remove("selected")
+})
+
+document.getElementById("task").addEventListener("click" = () => {
+    taskIndicator.classList.add("selected")
+    eventIndicator.classList.remove("selected")
+})
