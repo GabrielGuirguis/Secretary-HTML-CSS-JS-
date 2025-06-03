@@ -25,11 +25,28 @@
           </div>
         </div>
 
+        <div>
+
+          <div id="date">
+            
+            <div id="date-display" class="body">Tuesday, June 3 2025</div>
+          </div>
+          <input id="date-picker" type="date" />
+          
+          <div id="time" class="body-small">
+            <div> 
+              <div id="start-display" class="body-small">10:00 am</div>
+              <input id="start-picker" type="time" />
+            </div>
+            <div>-</div>
+            <div>
+              <div id="end-display" class="body-small">11:00 am</div>
+              <input id="end-picker" type="time" />
+            </div>
+          </div>
+          
         <input placeholder="Add description" id="description" class="body" />
 
-        <div>
-          <input id="date" type="date" /> <input id="start" type="time" />
-          <input id="end" type="time" />
         </div>
 
         <input id="submit" type="submit" />
@@ -37,6 +54,6 @@
       </form>
     </div>
 
-    <script src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
   </body>
 </html>
