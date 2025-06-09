@@ -14,7 +14,7 @@
           <input placeholder="Add title" id="summary" class="headline-medium" />
         </div>
 
-        <div id="itemType">
+        <div id="item-type">
           <div class="body" id="event">
             Event
             <div class="indicator selected" id="event-indicator"></div>
@@ -34,23 +34,30 @@
           <input id="date-picker" type="date" />
           
           <div id="time" class="body-small">
-            <div> 
+
+            <div class="time-div"> 
               <div id="start-display" class="body-small">10:00 am</div>
+              <div class="time-border"></div>
               <input id="start-picker" type="time" />
             </div>
+
             <div>-</div>
-            <div>
+
+            <div class="time-div">
               <div id="end-display" class="body-small">11:00 am</div>
+              <div class="time-border"></div>
               <input id="end-picker" type="time" />
             </div>
+
           </div>
+
+        <input placeholder="Add location" id="location" class="body">
           
         <input placeholder="Add description" id="description" class="body" />
 
         </div>
 
-        <input id="submit" type="submit" />
-        <select id="startTime"></select>
+        <input id="submit" type="submit" value="Save to Calendar"/>
       </form>
     </div>
 
