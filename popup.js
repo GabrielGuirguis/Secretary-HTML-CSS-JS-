@@ -11,6 +11,8 @@ const endPicker = document.getElementById("end-picker")
 const eventIndicator = document.getElementById("event-indicator")
 const taskIndicator = document.getElementById("task-indicator")
 
+datePicker.value = new Date().toISOString().split('T')[0]
+
 dateDisplay.textContent = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",

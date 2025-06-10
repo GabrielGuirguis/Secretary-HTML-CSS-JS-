@@ -12,10 +12,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             },
         }
 
-        //console.log("summary", message.summary);
-        //console.log("description", message.description);
-        //console.log("start", message.start);
-        //console.log("end", message.end);
+        console.log("summary", message.summary);
+        console.log("description", message.description);
+        console.log("start", message.start);
+        console.log("end", message.end);
 
         addEventToCalendar(event)
             .then(result => sendResponse({success: true, result}))
@@ -37,7 +37,7 @@ async function addEventToCalendar(event) {
         }
     )
     if (!response.ok) {
-        //console.log(response.json())
+        console.log(response.json())
         throw new Error("Failed to create event", response.json())
     }
     return await response.json()
@@ -49,7 +49,7 @@ function getAuthToken() {
             if (chrome.runtime.lastError) {
                 return reject(chrome.runtime.lastError)
             } else {
-                //console.log("Token: ", token)
+                console.log("Token: ", token)
                 return resolve(token)
             }
         })
